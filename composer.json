@@ -1,0 +1,44 @@
+{
+  "name": "zeroseven/z7-countries",
+  "license": "GPL-2.0-only",
+  "type": "typo3-cms-extension",
+  "description": "This TYPO3 extension offers the possibility of a flexible country configuration for single tree content.",
+  "authors": [
+    {
+      "name": "zeroseven design studios GmbH",
+      "email": "typo3@zeroseven.de",
+      "homepage": "https://www.zeroseven.de/",
+      "role": "Company"
+    },
+    {
+      "name": "Raphael Thanner",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^10.4 || ^11",
+    "jaybizzle/crawler-detect": "~1.2",
+    "doctrine/dbal": "^2.13.0",
+    "ext-json": "*",
+    "php": "^7.4 || ^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zeroseven\\Countries\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "z7_countries"
+    }
+  },
+  "scripts": {
+    "prepare-release": [
+      "rm .editorconfig",
+      "rm .gitattributes",
+      "rm .gitignore",
+      "rm .gitlab-ci.yml",
+      "rm -rf .github"
+    ]
+  }
+}
